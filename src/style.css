@@ -1,0 +1,20 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#content{
+    height: 100vh;
+    background-color: cadetblue;
+}
+
+#header,
+#footer{
+    height: 5vh;
+    background-color: brown;
+}
+
+#cards-container{
+    height: 90vh;
+    background-color: rgba(200, 200, 200, 0.2);
+}
