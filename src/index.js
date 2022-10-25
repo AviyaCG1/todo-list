@@ -1,1 +1,3 @@
-console.log('webpack build is working');
+import { Project } from "./project";
+import { Task } from "./task";
+
