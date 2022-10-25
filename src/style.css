@@ -17,4 +17,8 @@ body{
 #cards-container{
     height: 90vh;
     background-color: rgba(200, 200, 200, 0.2);
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 16px;
 }
