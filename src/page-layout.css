@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#content{
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-rows: 5vh 90vh 5vh;
+    grid-template-columns: 20vw 80vw;
+}
+
+#header{
+    min-height: 5vh;
+
+    grid-column: 1 / -1;
+}
+
+#nav{
+    min-height: 90vh;
+}
+
+#cards-container{
+    min-height: 90vh;
+}
+
+
+#footer{
+    min-height: 5vh;
+
+    grid-column: 1 / -1;
+}

@@ -7,7 +7,7 @@ export function pageLoad(){
     const HEADER = createHeader();
     CONTENT.appendChild(HEADER);
 
-    const NAV = createHeader();
+    const NAV = createNav();
     CONTENT.appendChild(NAV);
 
     const CONTAINER = createCardsContainer();
