@@ -15,6 +15,10 @@ export class Project{
         this.tasks.splice(index, 1);
     }
 
+    getTitle(){
+        return this.title;
+    }
+
     setTitle(title){
         this.title = title;
     }

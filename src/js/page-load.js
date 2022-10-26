@@ -12,7 +12,7 @@ export function pageLoad(){
     CONTENT.appendChild(NAV);
     navContentLoad();
 
-    const CONTAINER = createCardsContainer();
+    const CONTAINER = createMainContent();
     CONTENT.appendChild(CONTAINER);
 
     const FOOTER = createFooter();
@@ -33,11 +33,11 @@ function createNav(){
     return NAV;
 }
 
-function createCardsContainer(){
-    const CONTAINER = document.createElement('div');
-    CONTAINER.id = 'cards-container';
+function createMainContent(){
+    const MAIN_CONTENT = document.createElement('div');
+    MAIN_CONTENT.id = 'main-content';
 
-    return CONTAINER;
+    return MAIN_CONTENT;
 }
 
 function createFooter(){

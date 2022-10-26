@@ -3,6 +3,7 @@ import { Project } from "./project";
 import { Task } from "./task";
 import { PubSub } from "./pub-sub";
 import { pageLoad } from "./page-load";
+import { navAddProject } from "./nav-content-load";
 import '../css/page-layout.css';
 
 pageLoad();
@@ -11,6 +12,7 @@ pageLoad();
 let user = new User('Guest');
 
 // Load user projects from local storage
+let project = new Project('Bananas');
+navAddProject(project);
 
-// Load Nav and Projects to the page
 
