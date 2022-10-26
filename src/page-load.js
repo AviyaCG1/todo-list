@@ -7,6 +7,9 @@ export function pageLoad(){
     const HEADER = createHeader();
     CONTENT.appendChild(HEADER);
 
+    const NAV = createHeader();
+    CONTENT.appendChild(NAV);
+
     const CONTAINER = createCardsContainer();
     CONTENT.appendChild(CONTAINER);
 
@@ -19,6 +22,13 @@ function createHeader(){
     HEADER.id = 'header';
 
     return HEADER;
+}
+
+function createNav(){
+    const NAV = document.createElement('div');
+    NAV.id = 'nav';
+
+    return NAV;
 }
 
 function createCardsContainer(){
