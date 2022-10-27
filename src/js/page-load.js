@@ -1,4 +1,3 @@
-import { navContentLoad } from "./nav-content-load";
 
 export function pageLoad(){
     const CONTENT = document.createElement('div');
@@ -10,7 +9,6 @@ export function pageLoad(){
 
     const NAV = createNav();
     CONTENT.appendChild(NAV);
-    navContentLoad();
 
     const CONTAINER = createMainContent();
     CONTENT.appendChild(CONTAINER);

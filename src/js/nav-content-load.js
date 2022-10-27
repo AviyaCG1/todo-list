@@ -2,19 +2,19 @@
 export function navContentLoad(){
     const NAV = document.querySelector('#nav');
 
-    const TITLE = document.createElement('div');
-    TITLE.id = 'nav-title';
-    TITLE.textContent = 'My Projects';
-    NAV.appendChild(TITLE);
-
     const PROJECTS_LIST = document.createElement('ul');
     PROJECTS_LIST.id = 'projects-list';
     NAV.appendChild(PROJECTS_LIST);
 
+    const MY_PROJECTS = document.createElement('button');
+    MY_PROJECTS.id = 'my-projects';
+    MY_PROJECTS.textContent = 'My Projects';
+    addElementToProjectList(MY_PROJECTS);
+
     const CREATE_PROJECT = document.createElement('button');
     CREATE_PROJECT.id = 'create-project-button';
     CREATE_PROJECT.textContent = '+ New Project';
-    PROJECTS_LIST.appendChild(CREATE_PROJECT);
+    NAV.appendChild(CREATE_PROJECT);
 }
 
 export function navAddProject(project){
@@ -38,7 +38,5 @@ function addElementToProjectList(element){
 }
 
 function getProjectList(){
-    const NAV = document.querySelector('#nav');
-    const PROJECTS_LIST = NAV.childNodes.item(1);
-    return PROJECTS_LIST;
+    return document.querySelector('#projects-list')
 }

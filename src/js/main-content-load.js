@@ -24,6 +24,7 @@ export function mainAddProjectCard(project){
     });
 }
 
+// create a task div for project card display
 function createCardTask(task){
     const TASK = document.createElement('div');
     TASK.classList.add('.task');
