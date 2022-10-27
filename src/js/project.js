@@ -6,6 +6,10 @@ export class Project{
         this.tasks = [];
     }
 
+    getTaskList(){
+        return this.tasks;
+    }
+
     addTask(task) {
         this.tasks.push(task);
     }
