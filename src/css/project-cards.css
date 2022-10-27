@@ -1,0 +1,60 @@
+
+
+.my-projects{
+    --pad: 8px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+
+    padding: var(--pad);
+}
+
+.card{
+    width: calc(min(70vw, 300px));
+    background-color: #666;
+    padding: calc(var(--pad));
+
+    border-radius: 8px;
+    box-shadow: 2px 3px 5px black;
+}
+
+.card-title{
+    font-weight: 600;
+    font-size: 1.2rem;
+    border-bottom: 2px solid black;
+    padding-top: var(--pad);
+}
+
+.task{
+    padding: 2px;
+    padding-top: var(--pad);
+    border-bottom: 1px solid black;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-title{
+    font-size: 1.2rem;
+}
+
+.checkbox{
+    width: 15px;
+    height: 15px;
+
+    border: 1px solid black;
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+.add-task-button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    font-size: 1rem;
+    padding: 4px;
+}
