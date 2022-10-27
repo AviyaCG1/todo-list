@@ -21,13 +21,19 @@ export function navAddProject(project){
     let button = document.createElement('button');
     button.classList.add('nav-project-button');
     button.textContent = project.getTitle();
+    button.dataset.project = project.getTitle();
     addElementToProjectList(button);
 }
 
-function addElementToProjectList(elemnet){
+export function navRemoveProject(project){
+    let button = document.querySelector(`#nav [data-project="${project.getTitle()}"]`);
+    button.parentNode.remove();
+}
+
+function addElementToProjectList(element){
     const PROJECTS_LIST = getProjectList();
     let listNode = document.createElement('li');
-    listNode.appendChild(elemnet);
+    listNode.appendChild(element);
     PROJECTS_LIST.appendChild(listNode);
 }
 
