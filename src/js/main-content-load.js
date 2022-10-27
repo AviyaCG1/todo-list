@@ -1,10 +1,12 @@
 import { Project } from "./project";
 
-export function mainContentLoad(){
+export function myProjectsLoad(projects){
     const MAIN_CONTENT = getMainContent();
+
+    projects.forEach(project => mainAddProjectCard(project));
 }
 
-export function mainAddProject(project){
+export function mainAddProjectCard(project){
     const MAIN_CONTENT = getMainContent();
 
     const CARD = document.createElement('div');
@@ -16,6 +18,26 @@ export function mainAddProject(project){
     TITLE.classList.add('card-title');
     TITLE.textContent = project.getTitle();
     CARD.appendChild(TITLE);
+
+    project.getTaskList().forEach(task => {
+        CARD.appendChild(createCardTask(task))
+    });
+}
+
+function createCardTask(task){
+    const TASK = document.createElement('div');
+    TASK.classList.add('.task');
+
+    const TASK_TITLE = document.createElement('div');
+    TASK_TITLE.classList.add('task-title');
+    TASK_TITLE.textContent = task.getTitle();
+    TASK.appendChild(TASK_TITLE);
+
+    const CHECKBOX = document.createElement('div');
+    CHECKBOX.classList.add('checkbox', task.isCompleted() ? 'checked' : 'unchecked');
+    TASK.appendChild(CHECKBOX);
+
+    return TASK;
 }
 
 export function mainRemoveProject(project){
