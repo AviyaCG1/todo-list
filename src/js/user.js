@@ -5,6 +5,14 @@ export class User{
         this.projectList = [];
     }
 
+    getName(){
+        return this.name;
+    }
+
+    getProjectList(){
+        return this.projectList;
+    }
+
     addProject(project){
         this.projectList.push(project);
     }
