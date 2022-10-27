@@ -5,10 +5,18 @@ export class Task{
         this.description = description;
         this.dueDate = dueDate;
         this.priority = priority;
-        this.isDone = false;
+        this.completed = false;
     }
 
-    toggleDone(){
-        this.isDone = !this.isDone;
+    getTitle(){
+        return this.title;
+    }
+
+    isCompleted(){
+        return this.completed;
+    }
+
+    toggleCompleted(){
+        this.completed = !this.completed;
     }
 }
