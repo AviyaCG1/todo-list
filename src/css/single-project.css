@@ -1,0 +1,47 @@
+
+.single-project{
+    padding: 8px;
+}
+
+.single-project .project-title{
+    font-size: 2rem;
+}
+
+.single-project .task{
+    font-size: 1.3rem;
+
+    padding: 4px 0px;
+    padding-top: var(--pad);
+    border-bottom: 1px solid black;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr repeat(2, 7rem) 1.3rem;
+}
+
+.single-project .task > div{
+    align-self: center;
+}
+
+.single-project .checkbox{
+    width: 1.2rem;
+    height: 1.2rem;
+
+    border: 1px solid black;
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+.single-project .add-task-button{
+    background-color: transparent;
+    border: none;
+
+    font-size: 1.1rem;
+}
+
+.single-project .add-task-button:hover{
+    font-size: 1.15rem;
+    transition: var(--transition);
+
+    cursor: pointer;
+}
