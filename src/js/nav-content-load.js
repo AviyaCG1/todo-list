@@ -1,15 +1,17 @@
 
-export function navContentLoad(){
+export function navContentLoad(projects){
     const NAV = document.querySelector('#nav');
+
+    const MY_PROJECTS = document.createElement('button');
+    MY_PROJECTS.id = 'my-projects';
+    MY_PROJECTS.textContent = 'My Projects';
+    NAV.appendChild(MY_PROJECTS);
 
     const PROJECTS_LIST = document.createElement('ul');
     PROJECTS_LIST.id = 'projects-list';
     NAV.appendChild(PROJECTS_LIST);
 
-    const MY_PROJECTS = document.createElement('button');
-    MY_PROJECTS.id = 'my-projects';
-    MY_PROJECTS.textContent = 'My Projects';
-    addElementToProjectList(MY_PROJECTS);
+    projects.forEach(project => navAddProject(project));  
 
     const CREATE_PROJECT = document.createElement('button');
     CREATE_PROJECT.id = 'create-project-button';
