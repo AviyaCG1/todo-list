@@ -81,7 +81,7 @@ function addTask(task){
     TASK.appendChild(TASK_PRIORITY);
 
     const CHECKBOX = document.createElement('div');
-    CHECKBOX.classList.add('checkbox', task.isCompleted() ? 'checked' : null);
+    CHECKBOX.classList.add('checkbox', task.isCompleted() ? 'checked' : 'unchecked');
     TASK.appendChild(CHECKBOX);
 
     MAIN_CONTENT.appendChild(TASK);
@@ -97,7 +97,7 @@ function createCardTask(task){
     TASK.appendChild(TASK_TITLE);
 
     const CHECKBOX = document.createElement('div');
-    CHECKBOX.classList.add('checkbox', task.isCompleted() ? 'checked' : null);
+    CHECKBOX.classList.add('checkbox', task.isCompleted() ? 'checked' : 'unchecked');
     TASK.appendChild(CHECKBOX);
 
     return TASK;
