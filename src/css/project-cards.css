@@ -12,7 +12,7 @@
 
 .card{
     width: calc(min(70vw, 300px));
-    background-color: #666;
+    background-color: var(--light);
     padding: calc(var(--pad));
 
     border-radius: 8px;

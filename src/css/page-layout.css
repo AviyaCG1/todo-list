@@ -1,3 +1,9 @@
+:root{
+    --dark: #333;
+    --light: #777;
+    --lighter: #aaa;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -9,27 +15,19 @@ body{
     min-height: 100vh;
 
     display: grid;
-    grid-template-rows: 5vh 90vh 5vh;
+    grid-template-rows: 5vh auto 5vh;
     grid-template-columns: 20vw 80vw;
 }
 
-#header{
-    min-height: 5vh;
-
-    grid-column: 1 / -1;
-}
-
-#nav{
-    min-height: 90vh;
-}
-
-#main-content{
-    min-height: 90vh;
-}
-
-
+#header,
 #footer{
     min-height: 5vh;
 
     grid-column: 1 / -1;
 }
+
+#nav,
+#main-content{
+    min-height: 90vh;
+}
+
