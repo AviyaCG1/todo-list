@@ -19,7 +19,7 @@
     cursor: pointer;
     font-size: 1.11rem;
     background-color: var(--lighter);
-    transition: 200ms;
+    transition: var(--transition);
 }
 
 ul{

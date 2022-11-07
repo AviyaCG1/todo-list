@@ -2,6 +2,8 @@
     --dark: #333;
     --light: #777;
     --lighter: #aaa;
+
+    --transition: 200ms;
 }
 
 body{
