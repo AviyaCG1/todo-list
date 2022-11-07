@@ -26,7 +26,7 @@
     padding-top: var(--pad);
 }
 
-.task{
+.card .task{
     padding: 2px;
     padding-top: var(--pad);
     border-bottom: 1px solid black;
@@ -36,11 +36,11 @@
     align-items: center;
 }
 
-.task-title{
+.card .task-title{
     font-size: 1.2rem;
 }
 
-.checkbox{
+.card .checkbox{
     width: 15px;
     height: 15px;
 
@@ -50,7 +50,7 @@
     cursor: pointer;
 }
 
-.add-task-button{
+.card .add-task-button{
     background-color: transparent;
     border: none;
     cursor: pointer;
