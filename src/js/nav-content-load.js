@@ -48,7 +48,8 @@ function newProjectForm(){
     FORM.appendChild(CANCEL);
     
     // replace the button with the form
-    document.querySelector('#create-project-button').replaceWith(FORM);
+    document.querySelector('#create-project-button').remove();
+    document.querySelector('#nav').appendChild(FORM);
 }
 
 export function navAddProject(project){
