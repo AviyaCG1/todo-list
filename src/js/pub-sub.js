@@ -1,11 +1,11 @@
 
-export class PubSub{
+class PubSub{
     constructor(){
         this.events = {};
         this.subscribersId = -1;
     }
 
-    publish(event, data){
+    publish(event, data=null){
         if (!this.events[event]) return false;
 
         this.events[event].forEach(sub => {
@@ -19,7 +19,7 @@ export class PubSub{
         if(!this.events[event]){
             this.events[event] = [];
         }
-
+        // subId can be used by the subscriber to unsubscribing the event
         this.subscribersId += 1;
         const subId = this.subscribersId.toString();
 
@@ -27,11 +27,12 @@ export class PubSub{
             subId, 
             func,
         });
-
-        return subId; // subId can be used by the subscriber to unsubscribing the event
+        return subId;
     }
 
     unsubscribe(event, subId){
         this.events[event].splice(subId, 1);
     }
 }
+
+export const pubsub = new PubSub();
