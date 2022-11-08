@@ -1,3 +1,5 @@
+import { Project } from "./project";
+import { pubsub } from "./pub-sub";
 
 export function navContentLoad(projects){
     const NAV = document.querySelector('#nav');
@@ -16,7 +18,37 @@ export function navContentLoad(projects){
     const CREATE_PROJECT = document.createElement('button');
     CREATE_PROJECT.id = 'create-project-button';
     CREATE_PROJECT.textContent = '+ New Project';
+    CREATE_PROJECT.addEventListener('click', newProjectForm);
     NAV.appendChild(CREATE_PROJECT);
+}
+
+function newProjectForm(){
+    const FORM = document.createElement('div');
+    FORM.id = 'new-project-form';
+
+    const INPUT = document.createElement('input');
+    INPUT.placeholder = 'e.g buy stuff';
+    FORM.appendChild(INPUT);
+
+    const CREATE = document.createElement('button');
+    CREATE.id = 'create';
+    CREATE.textContent = 'Create';
+    CREATE.addEventListener('click', e => {
+        const title = document.querySelector("#new-project-form input").value;
+        if (title === "") return;
+
+        const newProject = new Project(title);
+        pubsub.publish('ADD_PROJECT', newProject);
+    });
+    FORM.appendChild(CREATE);
+
+    const CANCEL = document.createElement('button');
+    CANCEL.id = 'cancel';
+    CANCEL.textContent = 'cancel';
+    FORM.appendChild(CANCEL);
+    
+    // replace the button with the form
+    document.querySelector('#create-project-button').replaceWith(FORM);
 }
 
 export function navAddProject(project){
