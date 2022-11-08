@@ -1,29 +1,29 @@
 import { Task } from "./task";
 
-export class Project{
-    constructor(title){
-        this.title = title;
-        this.tasks = [];
-    }
+export default class Project {
+  constructor(title) {
+    this.title = title;
+    this.tasks = [];
+  }
 
-    getTaskList(){
-        return this.tasks;
-    }
+  getTaskList() {
+    return this.tasks;
+  }
 
-    addTask(task) {
-        this.tasks.push(task);
-    }
+  addTask(task) {
+    this.tasks.push(task);
+  }
 
-    removeTask(task){
-        let index = this.tasks.indexOf(task);
-        this.tasks.splice(index, 1);
-    }
+  removeTask(task) {
+    const index = this.tasks.indexOf(task);
+    this.tasks.splice(index, 1);
+  }
 
-    getTitle(){
-        return this.title;
-    }
+  getTitle() {
+    return this.title;
+  }
 
-    setTitle(title){
-        this.title = title;
-    }
+  setTitle(title) {
+    this.title = title;
+  }
 }
